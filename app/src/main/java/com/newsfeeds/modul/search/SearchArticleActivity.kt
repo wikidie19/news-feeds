@@ -104,6 +104,7 @@ class SearchArticleActivity : BaseActivity<SearchArticlePresenter>(), ISearchArt
                                 loadData(page)
 
                                 etSearchNews.dismissDropDown()
+                                hideKeyboard()
 
                                 saveSearchQuery(SearchQuery(queryValue = query))
                             }
@@ -143,6 +144,8 @@ class SearchArticleActivity : BaseActivity<SearchArticlePresenter>(), ISearchArt
             page = 1
             newsPortraitAdapter?.isShowLoading = true
             loadData(page)
+
+            hideKeyboard()
         }
 
     }

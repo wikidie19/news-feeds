@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.newsfeeds.helper.ApplicationHelper
+import com.newsfeeds.helper.KeyboardHelper
 import com.newsfeeds.helper.LocaleHelper
 import com.newsfeeds.helper.SharedHelper
 import com.newsfeeds.widget.LoadingDialog
@@ -61,6 +62,10 @@ abstract class BaseActivity<T : BasePresenter<*>> : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         BaseApplication.activityPaused()
+    }
+
+    fun hideKeyboard() {
+        KeyboardHelper.hideKeyboard(this)
     }
 
     fun showAlert(

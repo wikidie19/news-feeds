@@ -96,6 +96,11 @@ abstract class BaseFragment<T : BasePresenter<*>> : Fragment() {
         baseAct?.doLogout()
     }
 
+    fun hideKeyboard() {
+        val baseAct = activity as? BaseActivity<*>
+        baseAct?.hideKeyboard()
+    }
+
     fun collapseSearchView(searchView: SearchView) {
         searchView.onActionViewCollapsed()
     }
