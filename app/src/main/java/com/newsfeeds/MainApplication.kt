@@ -5,6 +5,7 @@ import androidx.multidex.MultiDexApplication
 import com.newsfeeds.constant.Constant
 import com.newsfeeds.model.favoriteNewsAppModule
 import com.newsfeeds.model.feedsAppModule
+import com.newsfeeds.model.searchQueryAppModule
 import org.koin.android.ext.android.startKoin
 import org.koin.dsl.module.applicationContext
 
@@ -26,7 +27,8 @@ class MainApplication : MultiDexApplication() {
             listOf(
                 applicationModule,
                 favoriteNewsAppModule,
-                feedsAppModule
+                feedsAppModule,
+                searchQueryAppModule
             )
         )
     }

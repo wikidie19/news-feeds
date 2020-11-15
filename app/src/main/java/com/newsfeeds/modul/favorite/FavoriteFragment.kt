@@ -80,6 +80,11 @@ class FavoriteFragment : BaseFragment<FavoritePresenter>(), IFavoriteView {
     }
 
     private fun loadData(favoriteNewsList: MutableList<FavoriteNews>?) {
+        if (favoriteNewsList.isNullOrEmpty()) {
+            mView.tvEmptyDataFavorite.visibility = View.VISIBLE
+        } else
+            mView.tvEmptyDataFavorite.visibility = View.GONE
+        
         this.favoriteNewsList = favoriteNewsList
         this.favoriteNewsList?.let {
             adapter.updateData(it)

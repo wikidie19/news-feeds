@@ -8,6 +8,9 @@ import com.newsfeeds.model.local.favorite.FavoriteNewsViewModel
 import com.newsfeeds.model.local.feeds.FeedsDB
 import com.newsfeeds.model.local.feeds.FeedsRepository
 import com.newsfeeds.model.local.feeds.FeedsViewModel
+import com.newsfeeds.model.local.search.SearchQueryDB
+import com.newsfeeds.model.local.search.SearchQueryRepository
+import com.newsfeeds.model.local.search.SearchQueryViewModel
 import org.koin.android.architecture.ext.viewModel
 import org.koin.dsl.module.applicationContext
 
@@ -40,4 +43,19 @@ val feedsAppModule = applicationContext {
     bean { FeedsRepository(get()) }
 
     viewModel { FeedsViewModel(get()) }
+}
+
+val searchQueryAppModule = applicationContext {
+    bean(name = Constant.Koin.DATABASE_DI) {
+        Room.databaseBuilder(
+            get(Constant.Koin.CONTEXT_APP_DI),
+            SearchQueryDB::class.java,
+            Constant.DB.DB_SEARCH_QUERY
+        ).fallbackToDestructiveMigration().build()
+    }
+
+    bean { get<SearchQueryDB>(Constant.Koin.DATABASE_DI).searchQueryDao() }
+    bean { SearchQueryRepository(get()) }
+
+    viewModel { SearchQueryViewModel(get()) }
 }

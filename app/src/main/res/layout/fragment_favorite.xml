@@ -28,17 +28,35 @@
             android:layout_width="?attr/actionBarSize"
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentRight="true"
-            android:padding="14dp"
             android:layout_centerInParent="true"
+            android:padding="14dp"
             app:srcCompat="@drawable/ic_delete"
             tools:ignore="VectorDrawableCompat" />
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFavoriteNews"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="16dp" />
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFavoriteNews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvEmptyDataFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/empty_favorite_data"
+            android:textColor="@color/nb_text_color"
+            android:visibility="gone" />
+
+    </RelativeLayout>
 
 </LinearLayout>

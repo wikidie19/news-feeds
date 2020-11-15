@@ -9,6 +9,7 @@ class Constant{
     object DB{
         const val DB_NEWS_FEEDS = "news_feeds_db"
         const val DB_FAVORITE_NEWS = "favorite_news_db"
+        const val DB_SEARCH_QUERY = "search_query_db"
     }
 
     object StaticUrl {

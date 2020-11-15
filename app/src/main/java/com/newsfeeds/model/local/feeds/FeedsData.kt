@@ -1,6 +1,7 @@
 package com.newsfeeds.model.local.feeds
 
 import androidx.room.*
+import com.newsfeeds.model.TimestampConverter
 import java.util.*
 
 @Entity(tableName = "feeds_data", indices = [Index(value = ["headlineMain"], unique = true)])
@@ -17,15 +18,3 @@ data class FeedsData @JvmOverloads constructor(
     @ColumnInfo(name = "dateCreate") @TypeConverters(TimestampConverter::class) var dateCreate: Date? = null,
     @PrimaryKey @ColumnInfo(name = "entryid") var id: String = UUID.randomUUID().toString()
 )
-
-class TimestampConverter {
-    @TypeConverter
-    fun fromTimestamp(value: Long?): Date? {
-        return if (value == null) null else Date(value)
-    }
-
-    @TypeConverter
-    fun dateToTimestamp(date: Date?): Long? {
-        return date?.time
-    }
-}
