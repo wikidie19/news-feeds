@@ -3,8 +3,6 @@ package com.newsfeeds.modul.detailnewsparent
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import androidx.viewpager.widget.ViewPager
 import com.newsfeeds.R
 import com.newsfeeds.base.BaseActivity
 import com.newsfeeds.model.articlesearch.DocsArticle
@@ -40,36 +38,13 @@ class DetailNewsParentActivity : BaseActivity<DetailNewsParentPresenter>(), IDet
     }
 
     override fun onViewInit() {
-        val adapter = DetailNewsAdapter(supportFragmentManager, articleList)
+        val adapter = DetailNewsAdapter(this, articleList)
         vpDetailNews.adapter = adapter
+        vpDetailNews.setCurrentItem(selectedPosition, true)
 
-        vpDetailNews.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
-            override fun onPageScrolled(
-                position: Int,
-                positionOffset: Float,
-                positionOffsetPixels: Int
-            ) {
-
-            }
-
-            override fun onPageSelected(position: Int) {
-                selectedPosition = position
-            }
-
-            override fun onPageScrollStateChanged(state: Int) {
-
-            }
-        })
-
-        Handler().postDelayed({
-            selectedPosition = if (selectedPosition >= articleList?.size!!) {
-                0
-            } else {
-                selectedPosition
-            }
-            vpDetailNews.setCurrentItem(selectedPosition, true)
-        }, 10)
-
+        ivBack.setOnClickListener {
+            finish()
+        }
 
     }
 

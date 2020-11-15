@@ -42,6 +42,6 @@
         app:shimmer_demo_child_count="5"
         app:shimmer_demo_grid_child_count="1"
         app:shimmer_demo_layout="@layout/loading_item_feeds"
-        app:shimmer_demo_shimmer_color="@color/nb_white"/>
+        app:shimmer_demo_shimmer_color="@color/nb_white" />
 
 </LinearLayout>

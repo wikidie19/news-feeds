@@ -10,10 +10,9 @@
     android:paddingRight="16dp">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:background="@color/nb_line_gray_light"
-        android:fontFamily="@font/montserrat_semi_bold"
         android:textSize="16sp" />
 
     <TextView
@@ -21,7 +20,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:background="@color/nb_line_gray_light"
-        android:fontFamily="@font/montserrat_semi_bold"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -41,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView

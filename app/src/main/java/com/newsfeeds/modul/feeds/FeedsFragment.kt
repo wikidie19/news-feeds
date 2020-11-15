@@ -135,7 +135,7 @@ class FeedsFragment : BaseFragment<FeedsPresenter>(), IFeedsView {
                 newsPortraitAdapter?.updateData(docsArticleList!!)
             }
             newsPortraitAdapter?.setOnItemClickListener { _, position ->
-                DetailNewsParentActivity.start(requireContext(), position - 1, docsArticleList)
+                DetailNewsParentActivity.start(requireContext(), position, docsArticleList)
             }
         }
     }

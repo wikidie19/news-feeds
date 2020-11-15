@@ -7,4 +7,5 @@
     <string name="search">Search</string>
     <string name="cancel">Cancel</string>
     <string name="empty_favorite_data">Data favorite is empty</string>
+    <string name="detail_article">Detail Article</string>
 </resources>
