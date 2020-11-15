@@ -1,0 +1,9 @@
+<resources>
+    <string name="no_connection">No connection internet</string>
+    <string name="host_not_found">Host not found</string>
+    <string name="favorite">Favorite</string>
+    <string name="feeds">Feeds</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="cancel">Cancel</string>
+</resources>

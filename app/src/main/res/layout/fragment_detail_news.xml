@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNewsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="As Covid-19 Closes Schools, the World’s Children Go to Work"
+            android:textColor="@color/nb_text_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvNewsSnippet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:lineSpacingExtra="2dp"
+            android:text="Former students are taking illegal and often dangerous jobs in India and other developing countries, potentially rolling back years of progress in social mobility and public health."
+            android:textColor="@color/nb_text_gray_light"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ivNewsDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxHeight="320dp"
+            android:minHeight="220dp"
+            android:scaleType="centerCrop"
+            android:src="@color/nb_line_gray_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="By Jeffrey Gettleman and Suhasini Raj"
+                    android:textColor="@color/nb_text_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvPublishTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Published, Sept. 27, 2020"
+                    android:textColor="@color/nb_text_gray_light"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivFavoriteNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_bm_favorite"
+                tools:ignore="VectorDrawableCompat" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNewsParagraph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:lineSpacingExtra="2dp"
+            android:text="TUMAKURU, India — Every morning in front of the Devaraj Urs public housing apartment blocks on the outskirts of the city of Tumakuru, a swarm of children pours into the street."
+            android:textColor="@color/nb_text_gray_light"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

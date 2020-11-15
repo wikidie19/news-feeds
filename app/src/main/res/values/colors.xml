@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#014235</color>
+    <color name="colorPrimaryDark">#001d0f</color>
+    <color name="colorAccent">#356d5f</color>
+
+    <color name="nb_black">#000000</color>
+    <color name="nb_darkgray">#ff444444</color>
+    <color name="nb_gray">#ff888888</color>
+    <color name="nb_lightgray">#ffcccccc</color>
+    <color name="nb_lightestgray">#ebebeb</color>
+    <color name="nb_milkgray">#efefef</color>
+    <color name="nb_white">#FFFFFF</color>
+    <color name="nb_transparent">@android:color/transparent</color>
+    <color name="nb_black_transparent">#29000000</color>
+    <color name="nb_white_transparent">#E6FFFFFF</color>
+    <color name="nb_red">#E74C3C</color>
+    <color name="nb_red_darker">#c13f31</color>
+    <color name="nb_red_transparent">#b5e74c3c</color>
+    <color name="nb_green">#3cbc78</color>
+    <color name="nb_yellow">#FDD835</color>
+    <color name="nb_sun">#F4A628</color>
+    <color name="nb_blue">#22A7F0</color>
+    <color name="nb_grey">#9E9E9E</color>
+    <color name="nb_darkred">#FA2E45</color>
+    <color name="nb_lightblue">#e3f6fe</color>
+    <color name="nb_lightpurple">#c9d7f8</color>
+
+    <color name="nb_blue_primary">#323c9f</color>
+    <color name="nb_blue_transparent">#4D323c9f</color>
+    <color name="nb_orange">#f6921e</color>
+    <color name="nb_line_gray_light">#eeeeee</color>
+    <color name="nb_text_color">#424242</color>
+    <color name="nb_text_gray_light">#757575</color>
+    <color name="nb_text_green">#03796b</color>
+    <color name="nb_green_light">#f0fff6</color>
+    <color name="nb_pink">#e81c63</color>
+    <color name="nb_pink_light">#fff0f5</color>
+
+</resources>
