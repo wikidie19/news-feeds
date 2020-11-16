@@ -15,6 +15,7 @@ import com.newsfeeds.R
 import com.newsfeeds.base.BaseFragment
 import com.newsfeeds.constant.Constant
 import com.newsfeeds.helper.DateHelper
+import com.newsfeeds.helper.LoggerHelper
 import com.newsfeeds.model.articlesearch.DocsArticle
 import com.newsfeeds.model.local.favorite.FavoriteNews
 import com.newsfeeds.model.local.favorite.FavoriteNewsViewModel
@@ -109,7 +110,9 @@ class DetailNewsFragment : BaseFragment<DetailNewsPresenter>(), IDetailNewsView 
                         byline = Gson().toJson(newsArticle?.byline)
                     )
                 saveFavoriteNews(favoriteNews)
+                isFavorite = true
             } else {
+                isFavorite = false
                 removeFavoriteNews(newsArticle?.headline?.main)
             }
         }
@@ -119,13 +122,13 @@ class DetailNewsFragment : BaseFragment<DetailNewsPresenter>(), IDetailNewsView 
     private fun initViewFavoriteNews(favoriteNewsList: MutableList<FavoriteNews>?) {
         if (!isAdded)
             return
+
         favoriteNewsList?.let {
             val filterFavoriteNews = favoriteNewsList.filter {
-                it.headlineMain == newsArticle?.headline?.main
+                it.headlineMain.equals(newsArticle?.headline?.main, true)
             }
 
             if (!filterFavoriteNews.isNullOrEmpty()) {
-                isFavorite = true
                 mView.ivFavoriteNews.setColorFilter(
                     ContextCompat.getColor(
                         requireContext(),
@@ -133,7 +136,6 @@ class DetailNewsFragment : BaseFragment<DetailNewsPresenter>(), IDetailNewsView 
                     ), PorterDuff.Mode.SRC_IN
                 )
             } else {
-                isFavorite = false
                 mView.ivFavoriteNews.setColorFilter(
                     ContextCompat.getColor(
                         requireContext(),
