@@ -117,6 +117,8 @@ class DetailNewsFragment : BaseFragment<DetailNewsPresenter>(), IDetailNewsView 
     }
 
     private fun initViewFavoriteNews(favoriteNewsList: MutableList<FavoriteNews>?) {
+        if (!isAdded)
+            return
         favoriteNewsList?.let {
             val filterFavoriteNews = favoriteNewsList.filter {
                 it.headlineMain == newsArticle?.headline?.main
